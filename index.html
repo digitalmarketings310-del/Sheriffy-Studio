@@ -638,43 +638,81 @@
       overflow: hidden;
       position: relative;
       background: #0c0b10;
+      transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
     }
+
+    .work-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(168,85,247,0.45);
+      box-shadow:
+        0 25px 60px rgba(0,0,0,0.4),
+        0 0 35px rgba(147,51,234,0.12);
+    }
+
+
+    /* =========================================================
+       OUR WORK IMAGES
+    ========================================================= */
 
     .work-visual {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(
-          circle at 70% 30%,
-          rgba(168,85,247,0.35),
-          transparent 35%
-        ),
-        linear-gradient(
-          135deg,
-          #120c18,
-          #08080b
-        );
+      overflow: hidden;
+      background: #0c0b10;
     }
 
-    .work-visual::before {
-      content: "";
-      position: absolute;
-      inset: 25px;
-      border: 1px solid rgba(168,85,247,0.15);
-      border-radius: 16px;
-      transform: rotate(-4deg);
+    .work-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition:
+        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.5s ease;
+    }
+
+    .work-card:hover .work-visual img {
+      transform: scale(1.08);
+      filter: brightness(1.08);
     }
 
     .work-visual::after {
       content: "";
       position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 1px solid rgba(192,132,252,0.18);
-      right: 15%;
-      top: 20%;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.92) 0%,
+          rgba(0,0,0,0.55) 40%,
+          rgba(7,7,10,0.12) 75%,
+          rgba(7,7,10,0.05) 100%
+        );
+      pointer-events: none;
     }
+
+    .work-visual::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(147,51,234,0.18);
+      filter: blur(65px);
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+
+    /* =========================================================
+       WORK OVERLAY
+    ========================================================= */
 
     .work-overlay {
       position: absolute;
@@ -689,6 +727,7 @@
           rgba(0,0,0,0.9),
           transparent 65%
         );
+      z-index: 3;
     }
 
     .work-tag {
@@ -1678,9 +1717,24 @@
       <div class="work-grid">
 
 
+        <!-- =================================================
+             01 YOUTUBE GROWTH
+        ================================================== -->
+
         <div class="work-card reveal">
 
-          <div class="work-visual"></div>
+          <div class="work-visual">
+
+            <img
+              src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1400&q=85"
+              alt="YouTube Growth and Channel Strategy"
+              width="1400"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+
+          </div>
 
           <div class="work-overlay">
 
@@ -1701,24 +1755,24 @@
         </div>
 
 
+        <!-- =================================================
+             02 DIGITAL MARKETING
+        ================================================== -->
+
         <div class="work-card reveal">
 
-          <div
-            class="work-visual"
-            style="
-              background:
-              radial-gradient(
-                circle at 30% 35%,
-                rgba(192,132,252,0.35),
-                transparent 35%
-              ),
-              linear-gradient(
-                135deg,
-                #0e1018,
-                #09070c
-              );
-            "
-          ></div>
+          <div class="work-visual">
+
+            <img
+              src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1400&q=85"
+              alt="Digital Marketing Brand Promotion"
+              width="1400"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+
+          </div>
 
           <div class="work-overlay">
 
@@ -1739,24 +1793,24 @@
         </div>
 
 
+        <!-- =================================================
+             03 MUSIC PROMOTION
+        ================================================== -->
+
         <div class="work-card reveal">
 
-          <div
-            class="work-visual"
-            style="
-              background:
-              radial-gradient(
-                circle at 65% 25%,
-                rgba(147,51,234,0.4),
-                transparent 32%
-              ),
-              linear-gradient(
-                135deg,
-                #160b1d,
-                #08080b
-              );
-            "
-          ></div>
+          <div class="work-visual">
+
+            <img
+              src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1400&q=85"
+              alt="Music Promotion and Artist Visibility"
+              width="1400"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+
+          </div>
 
           <div class="work-overlay">
 
@@ -1778,24 +1832,24 @@
         </div>
 
 
+        <!-- =================================================
+             04 WEB DEVELOPMENT
+        ================================================== -->
+
         <div class="work-card reveal">
 
-          <div
-            class="work-visual"
-            style="
-              background:
-              radial-gradient(
-                circle at 45% 35%,
-                rgba(168,85,247,0.4),
-                transparent 30%
-              ),
-              linear-gradient(
-                135deg,
-                #090c15,
-                #08080b
-              );
-            "
-          ></div>
+          <div class="work-visual">
+
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"
+              alt="Web Development Digital Experiences"
+              width="1400"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+
+          </div>
 
           <div class="work-overlay">
 
@@ -1815,6 +1869,7 @@
           </div>
 
         </div>
+
 
       </div>
 
