@@ -1,1206 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sheriffy Studio | Creative Digital Studio</title>
-
-    <meta
-        name="description"
-        content="Sheriffy Studio is a creative digital studio specializing in AI animation, video production, music production, web development, YouTube content and digital promotion."
-    >
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #07070a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(7, 7, 10, 0.92);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid #222;
-        }
-
-        .nav-inner {
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 23px;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            white-space: nowrap;
-        }
-
-        .logo span {
-            color: #7c5cff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #8b7cff;
-        }
-
-        .nav-button {
-            background: linear-gradient(90deg, #7c5cff, #00d9ff);
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-
-        .nav-button:hover {
-            transform: translateY(-3px);
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-            background:
-                radial-gradient(
-                    circle at 20% 30%,
-                    rgba(124, 92, 255, 0.2),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 80% 70%,
-                    rgba(0, 217, 255, 0.15),
-                    transparent 35%
-                ),
-                #07070a;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 8px 15px;
-            border: 1px solid #333;
-            border-radius: 30px;
-            color: #aaa;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 95px);
-            line-height: 1;
-            margin-bottom: 30px;
-            letter-spacing: -4px;
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #7c5cff, #00d9ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero p {
-            max-width: 680px;
-            font-size: 20px;
-            color: #aaa;
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .primary-btn,
-        .secondary-btn {
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .primary-btn {
-            background: linear-gradient(90deg, #7c5cff, #00d9ff);
-        }
-
-        .secondary-btn {
-            border: 1px solid #444;
-            background: transparent;
-        }
-
-        .primary-btn:hover,
-        .secondary-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            color: #999;
-            max-width: 650px;
-            margin-bottom: 50px;
-        }
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            padding: 30px;
-            border: 1px solid #222;
-            border-radius: 20px;
-            background: #0d0d12;
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: #6655dd;
-        }
-
-        .service-number {
-            color: #7c5cff;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: #999;
-        }
-
-        /* =========================
-           SKILLS & EXPERTISE
-        ========================= */
-
-        .skills-section {
-            background: #0b0b10;
-        }
-
-        .skills-intro {
-            max-width: 700px;
-            color: #999;
-            margin-bottom: 50px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .skill-category {
-            background: #0d0d12;
-            border: 1px solid #222;
-            border-radius: 22px;
-            padding: 30px;
-            transition: 0.3s;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            border-color: #6655dd;
-        }
-
-        .skill-category-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .skill-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(
-                135deg,
-                rgba(124, 92, 255, 0.2),
-                rgba(0, 217, 255, 0.12)
-            );
-            border: 1px solid #333;
-            color: #8b7cff;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .skill-category h3 {
-            font-size: 22px;
-        }
-
-        .skill-count {
-            color: #777;
-            font-size: 13px;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 9px 13px;
-            border-radius: 30px;
-            background: #15151c;
-            border: 1px solid #292933;
-            color: #bbb;
-            font-size: 14px;
-            transition: 0.25s;
-        }
-
-        .skill-tag:hover {
-            color: #fff;
-            border-color: #7c5cff;
-            transform: translateY(-2px);
-        }
-
-        /* =========================
-           OUR WORK
-        ========================= */
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .work-card {
-            min-height: 300px;
-            border-radius: 20px;
-            padding: 30px;
-            display: flex;
-            align-items: flex-end;
-            background:
-                linear-gradient(
-                    180deg,
-                    transparent,
-                    rgba(0, 0, 0, 0.9)
-                ),
-                linear-gradient(
-                    135deg,
-                    #191426,
-                    #101b24
-                );
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-
-        .work-card:hover {
-            transform: translateY(-8px);
-            border-color: #6655dd;
-        }
-
-        .work-card h3 {
-            font-size: 24px;
-        }
-
-        .work-card p {
-            color: #aaa;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: #0b0b10;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-text p {
-            color: #aaa;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .stat {
-            padding: 30px;
-            border: 1px solid #222;
-            border-radius: 20px;
-        }
-
-        .stat h3 {
-            font-size: 38px;
-            color: #8b7cff;
-        }
-
-        .stat p {
-            color: #999;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: clamp(45px, 7vw, 80px);
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        .contact p {
-            color: #999;
-            max-width: 600px;
-            margin: 0 auto 35px;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            border-top: 1px solid #222;
-            padding: 35px 0;
-            color: #777;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .services-grid,
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 700px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .services-grid,
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .section-title {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .stats {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .skill-category {
-                padding: 22px;
-            }
-
-            .logo {
-                font-size: 18px;
-            }
-
-            .nav-button {
-                padding: 10px 14px;
-                font-size: 13px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-
-    <nav>
-        <div class="container nav-inner">
-
-            <a href="#" class="logo">
-                SHERIFFY <span>STUDIO</span>
-            </a>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#work">Our Work</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-            </ul>
-
-            <a href="#contact" class="nav-button">
-                Start a Project
-            </a>
-
-        </div>
-    </nav>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero">
-
-        <div class="container">
-
-            <div class="hero-content">
-
-                <div class="tag">
-                    Creative Digital Studio
-                </div>
-
-                <h1>
-                    We turn ideas into
-                    <span class="gradient-text">
-                        unforgettable experiences.
-                    </span>
-                </h1>
-
-                <p>
-                    Sheriffy Studio creates powerful digital experiences
-                    through AI animation, video production, music,
-                    web development and creative content.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#services" class="primary-btn">
-                        Explore Services
-                    </a>
-
-                    <a href="#contact" class="secondary-btn">
-                        Let's Work Together
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================== -->
-
-    <section id="services">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                What We Do
-            </h2>
-
-            <p class="section-subtitle">
-                From creative concepts to finished digital products,
-                Sheriffy Studio brings ideas to life with professional
-                execution.
-            </p>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <div class="service-number">01</div>
-
-                    <h3>AI & Animation</h3>
-
-                    <p>
-                        AI animation, character animation, 3D cartoons,
-                        storytelling, kids content and creative visual
-                        experiences.
-                    </p>
-                </div>
-
-
-                <div class="service-card">
-                    <div class="service-number">02</div>
-
-                    <h3>Video Production</h3>
-
-                    <p>
-                        YouTube videos, Shorts, Reels, TikTok content,
-                        lyric animation, cinematic editing and social
-                        content.
-                    </p>
-                </div>
-
-
-                <div class="service-card">
-                    <div class="service-number">03</div>
-
-                    <h3>Music Production</h3>
-
-                    <p>
-                        Music composition, orchestral arrangement,
-                        soundtracks, cello, strings and professional
-                        music production.
-                    </p>
-                </div>
-
-
-                <div class="service-card">
-                    <div class="service-number">04</div>
-
-                    <h3>Web Development</h3>
-
-                    <p>
-                        Professional business websites, portfolios,
-                        WordPress, Shopify, landing pages and responsive
-                        designs.
-                    </p>
-                </div>
-
-
-                <div class="service-card">
-                    <div class="service-number">05</div>
-
-                    <h3>YouTube & Content</h3>
-
-                    <p>
-                        Faceless channels, storytelling content,
-                        educational videos, finance content and channel
-                        production.
-                    </p>
-                </div>
-
-
-                <div class="service-card">
-                    <div class="service-number">06</div>
-
-                    <h3>Digital Promotion</h3>
-
-                    <p>
-                        Music promotion, Google Ads, content promotion,
-                        email campaigns and digital audience growth
-                        strategies.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SKILLS & EXPERTISE
-    ========================== -->
-
-    <section id="skills" class="skills-section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Skills & <span class="gradient-text">Expertise</span>
-            </h2>
-
-            <p class="skills-intro">
-                A diverse creative and digital skill set designed to help
-                creators, brands, artists and businesses turn ideas into
-                professional digital experiences.
-            </p>
-
-
-            <div class="skills-grid">
-
-                <!-- AI & ANIMATION -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            AI
-                        </div>
-
-                        <div>
-                            <h3>AI & Animation</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">AI Video Generation</span>
-                        <span class="skill-tag">AI Animation</span>
-                        <span class="skill-tag">Character Animation</span>
-                        <span class="skill-tag">3D Animation</span>
-                        <span class="skill-tag">2D Animation</span>
-                        <span class="skill-tag">AI Character Design</span>
-                        <span class="skill-tag">Cartoon Animation</span>
-                        <span class="skill-tag">Storytelling Animation</span>
-                        <span class="skill-tag">Kids Animation</span>
-                        <span class="skill-tag">Motion Graphics</span>
-                        <span class="skill-tag">Visual Effects</span>
-                        <span class="skill-tag">AI Image Generation</span>
-                        <span class="skill-tag">AI Video Editing</span>
-                        <span class="skill-tag">Character Consistency</span>
-                        <span class="skill-tag">Cinematic Animation</span>
-                        <span class="skill-tag">Lip-Sync Animation</span>
-                        <span class="skill-tag">Facial Animation</span>
-                        <span class="skill-tag">Animated Storytelling</span>
-                        <span class="skill-tag">Product Animation</span>
-                        <span class="skill-tag">Creative Visual Design</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- VIDEO PRODUCTION -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            VD
-                        </div>
-
-                        <div>
-                            <h3>Video Production</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">Video Editing</span>
-                        <span class="skill-tag">YouTube Video Editing</span>
-                        <span class="skill-tag">Short-Form Video Editing</span>
-                        <span class="skill-tag">YouTube Shorts</span>
-                        <span class="skill-tag">Instagram Reels</span>
-                        <span class="skill-tag">TikTok Video Editing</span>
-                        <span class="skill-tag">Cinematic Editing</span>
-                        <span class="skill-tag">Music Video Editing</span>
-                        <span class="skill-tag">Lyric Video Creation</span>
-                        <span class="skill-tag">Motion Graphics</span>
-                        <span class="skill-tag">Text Animation</span>
-                        <span class="skill-tag">Visual Effects</span>
-                        <span class="skill-tag">Color Grading</span>
-                        <span class="skill-tag">Sound Design</span>
-                        <span class="skill-tag">Audio Synchronization</span>
-                        <span class="skill-tag">Video Transitions</span>
-                        <span class="skill-tag">Storytelling Editing</span>
-                        <span class="skill-tag">Social Media Content</span>
-                        <span class="skill-tag">Promotional Videos</span>
-                        <span class="skill-tag">Corporate Video Editing</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MUSIC PRODUCTION -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            MU
-                        </div>
-
-                        <div>
-                            <h3>Music Production</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">Music Production</span>
-                        <span class="skill-tag">Music Composition</span>
-                        <span class="skill-tag">Beat Production</span>
-                        <span class="skill-tag">Song Arrangement</span>
-                        <span class="skill-tag">Orchestral Composition</span>
-                        <span class="skill-tag">Cinematic Music</span>
-                        <span class="skill-tag">Soundtrack Production</span>
-                        <span class="skill-tag">String Arrangement</span>
-                        <span class="skill-tag">Cello Arrangement</span>
-                        <span class="skill-tag">Piano Composition</span>
-                        <span class="skill-tag">Background Music</span>
-                        <span class="skill-tag">Film Scoring</span>
-                        <span class="skill-tag">Audio Editing</span>
-                        <span class="skill-tag">Mixing</span>
-                        <span class="skill-tag">Mastering</span>
-                        <span class="skill-tag">Sound Design</span>
-                        <span class="skill-tag">Vocal Production</span>
-                        <span class="skill-tag">Instrumental Production</span>
-                        <span class="skill-tag">Music Synchronization</span>
-                        <span class="skill-tag">Audio Post-Production</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- WEB DEVELOPMENT -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            WD
-                        </div>
-
-                        <div>
-                            <h3>Web Development</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">Website Development</span>
-                        <span class="skill-tag">Website Design</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Responsive Web Design</span>
-                        <span class="skill-tag">Landing Page Design</span>
-                        <span class="skill-tag">Portfolio Websites</span>
-                        <span class="skill-tag">Business Websites</span>
-                        <span class="skill-tag">WordPress Development</span>
-                        <span class="skill-tag">Shopify Development</span>
-                        <span class="skill-tag">E-commerce Websites</span>
-                        <span class="skill-tag">UI Design</span>
-                        <span class="skill-tag">UX Design</span>
-                        <span class="skill-tag">Website Optimization</span>
-                        <span class="skill-tag">Mobile-Friendly Design</span>
-                        <span class="skill-tag">Website Customization</span>
-                        <span class="skill-tag">SEO-Friendly Websites</span>
-                        <span class="skill-tag">Website Maintenance</span>
-                        <span class="skill-tag">Vercel Deployment</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- YOUTUBE & CONTENT -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            YT
-                        </div>
-
-                        <div>
-                            <h3>YouTube & Content</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">YouTube Channel Management</span>
-                        <span class="skill-tag">YouTube Automation</span>
-                        <span class="skill-tag">Faceless YouTube Channels</span>
-                        <span class="skill-tag">YouTube SEO</span>
-                        <span class="skill-tag">Keyword Research</span>
-                        <span class="skill-tag">Content Strategy</span>
-                        <span class="skill-tag">YouTube Scriptwriting</span>
-                        <span class="skill-tag">Storytelling</span>
-                        <span class="skill-tag">Video Production</span>
-                        <span class="skill-tag">Thumbnail Strategy</span>
-                        <span class="skill-tag">YouTube Optimization</span>
-                        <span class="skill-tag">Audience Growth</span>
-                        <span class="skill-tag">Channel Optimization</span>
-                        <span class="skill-tag">Content Planning</span>
-                        <span class="skill-tag">Competitor Research</span>
-                        <span class="skill-tag">YouTube Analytics</span>
-                        <span class="skill-tag">Video Titles</span>
-                        <span class="skill-tag">Video Descriptions</span>
-                        <span class="skill-tag">YouTube Monetization Strategy</span>
-                        <span class="skill-tag">Content Repurposing</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- DIGITAL PROMOTION -->
-
-                <div class="skill-category">
-
-                    <div class="skill-category-header">
-
-                        <div class="skill-icon">
-                            DM
-                        </div>
-
-                        <div>
-                            <h3>Digital Promotion</h3>
-                            <div class="skill-count">
-                                20 Skills
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="skills-list">
-
-                        <span class="skill-tag">Digital Marketing</span>
-                        <span class="skill-tag">Social Media Marketing</span>
-                        <span class="skill-tag">YouTube Marketing</span>
-                        <span class="skill-tag">Music Promotion</span>
-                        <span class="skill-tag">Content Marketing</span>
-                        <span class="skill-tag">Google Ads</span>
-                        <span class="skill-tag">Social Media Advertising</span>
-                        <span class="skill-tag">Email Marketing</span>
-                        <span class="skill-tag">Lead Generation</span>
-                        <span class="skill-tag">Audience Growth</span>
-                        <span class="skill-tag">Brand Promotion</span>
-                        <span class="skill-tag">Online Advertising</span>
-                        <span class="skill-tag">Campaign Management</span>
-                        <span class="skill-tag">Marketing Strategy</span>
-                        <span class="skill-tag">SEO Marketing</span>
-                        <span class="skill-tag">Influencer Marketing</span>
-                        <span class="skill-tag">Social Media Management</span>
-                        <span class="skill-tag">Promotional Content</span>
-                        <span class="skill-tag">Conversion Optimization</span>
-                        <span class="skill-tag">Digital Brand Strategy</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         OUR WORK
-    ========================== -->
-
-    <section id="work">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Selected Work
-            </h2>
-
-            <p class="section-subtitle">
-                A glimpse into the type of creative projects
-                Sheriffy Studio can produce.
-            </p>
-
-            <div class="work-grid">
-
-                <div class="work-card">
-                    <div>
-                        <h3>Talking Fruit Characters</h3>
-                        <p>AI Character Animation</p>
-                    </div>
-                </div>
-
-
-                <div class="work-card">
-                    <div>
-                        <h3>Cinematic Orchestra</h3>
-                        <p>Music Production & Composition</p>
-                    </div>
-                </div>
-
-
-                <div class="work-card">
-                    <div>
-                        <h3>Short Form Content</h3>
-                        <p>Social Media Video Editing</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about" class="about">
-
-        <div class="container">
-
-            <div class="about-content">
-
-                <div class="about-text">
-
-                    <h2 class="section-title">
-                        Built for ideas that deserve attention.
-                    </h2>
-
-                    <p>
-                        Sheriffy Studio is a creative digital studio focused
-                        on helping individuals, creators, brands and businesses
-                        transform ideas into professional digital experiences.
-                    </p>
-
-                    <p>
-                        We combine creativity, technology and storytelling
-                        to create work that looks professional and communicates
-                        clearly.
-                    </p>
-
-                </div>
-
-
-                <div class="stats">
-
-                    <div class="stat">
-                        <h3>01</h3>
-                        <p>Creative Direction</p>
-                    </div>
-
-                    <div class="stat">
-                        <h3>02</h3>
-                        <p>Professional Production</p>
-                    </div>
-
-                    <div class="stat">
-                        <h3>03</h3>
-                        <p>Modern Technology</p>
-                    </div>
-
-                    <div class="stat">
-                        <h3>04</h3>
-                        <p>Client-Focused Results</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact" class="contact">
-
-        <div class="container">
-
-            <h2>
-                Have an idea?
-                <span class="gradient-text">
-                    Let's build it.
-                </span>
-            </h2>
-
+<section id="skills" class="skills-section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-label">OUR EXPERTISE</span>
+            <h2>Creative Skills. <span>Digital Expertise.</span></h2>
             <p>
-                Tell us what you're working on and let's create something
-                professional, engaging and memorable.
+                A versatile range of creative, technical, marketing, and AI-powered skills.
             </p>
+        </div>
 
-            <div class="contact-buttons">
+        <div class="skills-grid">
 
-                <a
-                    href="mailto:digitalmarketings310@gmail.com"
-                    class="primary-btn"
-                >
-                    Email Sheriffy Studio
-                </a>
+            <!-- 01 AI & ANIMATION -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">AI</div>
+                    <div>
+                        <h3>AI & Animation</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
 
-                <a
-                    href="https://wa.me/2349035908327"
-                    class="secondary-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Chat on WhatsApp
-                </a>
+                <div class="skill-list">
+                    <span class="skill-tag">AI Video Generation</span>
+                    <span class="skill-tag">AI Animation</span>
+                    <span class="skill-tag">Character Animation</span>
+                    <span class="skill-tag">3D Animation</span>
+                    <span class="skill-tag">2D Animation</span>
+                    <span class="skill-tag">AI Character Design</span>
+                    <span class="skill-tag">Motion Graphics</span>
+                    <span class="skill-tag">Visual Effects</span>
+                    <span class="skill-tag">Character Consistency</span>
+                    <span class="skill-tag">Cinematic Animation</span>
+                </div>
+            </div>
 
+
+            <!-- 02 VIDEO PRODUCTION -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">VD</div>
+                    <div>
+                        <h3>Video Production</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Video Editing</span>
+                    <span class="skill-tag">YouTube Video Editing</span>
+                    <span class="skill-tag">Short-Form Video Editing</span>
+                    <span class="skill-tag">Cinematic Editing</span>
+                    <span class="skill-tag">Music Video Editing</span>
+                    <span class="skill-tag">Lyric Video Creation</span>
+                    <span class="skill-tag">Color Grading</span>
+                    <span class="skill-tag">Sound Design</span>
+                    <span class="skill-tag">Motion Graphics</span>
+                    <span class="skill-tag">Storytelling Editing</span>
+                </div>
+            </div>
+
+
+            <!-- 03 MUSIC & AUDIO -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">MU</div>
+                    <div>
+                        <h3>Music & Audio</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Music Production</span>
+                    <span class="skill-tag">Music Composition</span>
+                    <span class="skill-tag">Beat Production</span>
+                    <span class="skill-tag">Song Arrangement</span>
+                    <span class="skill-tag">Cinematic Music</span>
+                    <span class="skill-tag">Film Scoring</span>
+                    <span class="skill-tag">Audio Editing</span>
+                    <span class="skill-tag">Mixing</span>
+                    <span class="skill-tag">Mastering</span>
+                    <span class="skill-tag">Sound Design</span>
+                </div>
+            </div>
+
+
+            <!-- 04 WEB & E-COMMERCE -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">WD</div>
+                    <div>
+                        <h3>Web & E-Commerce</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Website Development</span>
+                    <span class="skill-tag">Website Design</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Landing Page Design</span>
+                    <span class="skill-tag">Portfolio Websites</span>
+                    <span class="skill-tag">Business Websites</span>
+                    <span class="skill-tag">Shopify Development</span>
+                    <span class="skill-tag">Vercel Deployment</span>
+                </div>
+            </div>
+
+
+            <!-- 05 YOUTUBE & CONTENT -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">YT</div>
+                    <div>
+                        <h3>YouTube & Content</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">YouTube Channel Management</span>
+                    <span class="skill-tag">YouTube Automation</span>
+                    <span class="skill-tag">Faceless YouTube Channels</span>
+                    <span class="skill-tag">YouTube SEO</span>
+                    <span class="skill-tag">Keyword Research</span>
+                    <span class="skill-tag">Content Strategy</span>
+                    <span class="skill-tag">YouTube Scriptwriting</span>
+                    <span class="skill-tag">Thumbnail Strategy</span>
+                    <span class="skill-tag">Channel Optimization</span>
+                    <span class="skill-tag">YouTube Monetization</span>
+                </div>
+            </div>
+
+
+            <!-- 06 SOCIAL MEDIA MANAGEMENT -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">SM</div>
+                    <div>
+                        <h3>Social Media Management</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Social Media Strategy</span>
+                    <span class="skill-tag">Content Scheduling</span>
+                    <span class="skill-tag">Instagram Management</span>
+                    <span class="skill-tag">Facebook Management</span>
+                    <span class="skill-tag">TikTok Management</span>
+                    <span class="skill-tag">LinkedIn Management</span>
+                    <span class="skill-tag">Community Management</span>
+                    <span class="skill-tag">Social Media Analytics</span>
+                    <span class="skill-tag">Content Planning</span>
+                    <span class="skill-tag">Organic Growth</span>
+                </div>
+            </div>
+
+
+            <!-- 07 CREATIVE DESIGN -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">CD</div>
+                    <div>
+                        <h3>Creative Design</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Graphic Design</span>
+                    <span class="skill-tag">Brand Identity</span>
+                    <span class="skill-tag">Logo Design</span>
+                    <span class="skill-tag">Social Media Design</span>
+                    <span class="skill-tag">YouTube Thumbnails</span>
+                    <span class="skill-tag">Banner Design</span>
+                    <span class="skill-tag">Poster Design</span>
+                    <span class="skill-tag">Flyer Design</span>
+                    <span class="skill-tag">Photo Editing</span>
+                    <span class="skill-tag">Digital Artwork</span>
+                </div>
+            </div>
+
+
+            <!-- 08 DIGITAL MARKETING -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">DM</div>
+                    <div>
+                        <h3>Digital Marketing</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Digital Marketing</span>
+                    <span class="skill-tag">Social Media Marketing</span>
+                    <span class="skill-tag">YouTube Marketing</span>
+                    <span class="skill-tag">Content Marketing</span>
+                    <span class="skill-tag">Google Ads</span>
+                    <span class="skill-tag">Social Media Advertising</span>
+                    <span class="skill-tag">Email Marketing</span>
+                    <span class="skill-tag">Lead Generation</span>
+                    <span class="skill-tag">Campaign Management</span>
+                    <span class="skill-tag">Marketing Strategy</span>
+                </div>
+            </div>
+
+
+            <!-- 09 PROMOTION & BRAND GROWTH -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">PG</div>
+                    <div>
+                        <h3>Promotion & Brand Growth</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Brand Promotion</span>
+                    <span class="skill-tag">Product Promotion</span>
+                    <span class="skill-tag">Artist Promotion</span>
+                    <span class="skill-tag">Music Marketing</span>
+                    <span class="skill-tag">YouTube Promotion</span>
+                    <span class="skill-tag">Social Media Promotion</span>
+                    <span class="skill-tag">Influencer Outreach</span>
+                    <span class="skill-tag">Audience Development</span>
+                    <span class="skill-tag">Brand Awareness</span>
+                    <span class="skill-tag">Growth Strategy</span>
+                </div>
+            </div>
+
+
+            <!-- 10 SEO & AI AUTOMATION -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">AX</div>
+                    <div>
+                        <h3>SEO & AI Automation</h3>
+                        <span>10 Skills</span>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <span class="skill-tag">Search Engine Optimization</span>
+                    <span class="skill-tag">On-Page SEO</span>
+                    <span class="skill-tag">Technical SEO</span>
+                    <span class="skill-tag">Keyword Research</span>
+                    <span class="skill-tag">Competitor SEO Analysis</span>
+                    <span class="skill-tag">Local SEO</span>
+                    <span class="skill-tag">AI Workflow Automation</span>
+                    <span class="skill-tag">AI Content Creation</span>
+                    <span class="skill-tag">AI Prompt Engineering</span>
+                    <span class="skill-tag">Marketing Automation</span>
+                </div>
             </div>
 
         </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="container footer-inner">
-
-            <div>
-                © 2026 Sheriffy Studio. All rights reserved.
-            </div>
-
-            <div>
-                Creative Digital Studio
-            </div>
-
-        </div>
-
-    </footer>
-
-</body>
-</html>
+    </div>
+</section>
