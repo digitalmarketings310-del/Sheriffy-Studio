@@ -1,265 +1,2310 @@
-<section id="skills" class="skills-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Sheriffy Studio provides professional digital marketing, social media marketing, YouTube marketing, music promotion, YouTube channel management, YouTube automation, YouTube SEO and web development services."
+  >
+
+  <meta
+    name="keywords"
+    content="Digital Marketing, Social Media Marketing, YouTube Marketing, Music Promotion, YouTube Automation, YouTube SEO, Web Development"
+  >
+
+  <meta name="author" content="Sheriffy Studio">
+
+  <title>Sheriffy Studio | Digital Marketing & Creative Studio</title>
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07070a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: #9333ea;
+      color: white;
+    }
+
+
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #c084fc;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        #9333ea,
+        #c084fc
+      );
+      border-radius: 10px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 span {
+      color: #a855f7;
+    }
+
+    .section-heading p {
+      color: #a1a1aa;
+      font-size: 17px;
+      max-width: 680px;
+    }
+
+
+    /* =====================================================
+       BACKGROUND
+    ===================================================== */
+
+    .background-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(147, 51, 234, 0.08);
+      filter: blur(110px);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .glow-one {
+      top: -200px;
+      left: -200px;
+    }
+
+    .glow-two {
+      right: -250px;
+      top: 40%;
+    }
+
+    .grid-background {
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 50px 50px;
+
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+
+      pointer-events: none;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      padding: 18px 0;
+
+      background: rgba(7, 7, 10, 0.80);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #a855f7;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #b7b7c0;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      padding: 12px 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #9333ea,
+          #7e22ce
+        );
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      box-shadow:
+        0 10px 30px rgba(147,51,234,0.2);
+
+      transition: 0.3s ease;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 15px 40px rgba(147,51,234,0.35);
+    }
+
+    .menu-button {
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid rgba(255,255,255,0.1);
+
+      background:
+        rgba(255,255,255,0.03);
+
+      color: white;
+
+      border-radius: 10px;
+
+      font-size: 20px;
+
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding-top: 120px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      border:
+        1px solid rgba(168,85,247,0.3);
+
+      background:
+        rgba(147,51,234,0.08);
+
+      padding: 9px 15px;
+
+      border-radius: 50px;
+
+      color: #d8b4fe;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #a855f7;
+
+      box-shadow:
+        0 0 15px #a855f7;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 92px);
+
+      line-height: 0.98;
+
+      letter-spacing: -5px;
+
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      background:
+        linear-gradient(
+          135deg,
+          #c084fc,
+          #9333ea,
+          #e9d5ff
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      background-clip: text;
+    }
+
+    .hero-description {
+      max-width: 690px;
+
+      color: #a1a1aa;
+
+      font-size: 18px;
+
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 15px 24px;
+
+      border-radius: 10px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background:
+        linear-gradient(
+          135deg,
+          #9333ea,
+          #7e22ce
+        );
+
+      box-shadow:
+        0 15px 40px rgba(147,51,234,0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 20px 50px rgba(147,51,234,0.35);
+    }
+
+    .btn-secondary {
+      border:
+        1px solid rgba(255,255,255,0.1);
+
+      background:
+        rgba(255,255,255,0.03);
+
+      color: #ddd;
+    }
+
+    .btn-secondary:hover {
+      border-color:
+        rgba(168,85,247,0.5);
+
+      background:
+        rgba(147,51,234,0.08);
+
+      transform: translateY(-3px);
+    }
+
+    .hero-orb {
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      border-radius: 50%;
+
+      right: -200px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      border:
+        1px solid rgba(168,85,247,0.13);
+
+      box-shadow:
+        inset 0 0 100px rgba(147,51,234,0.08),
+        0 0 100px rgba(147,51,234,0.05);
+    }
+
+    .hero-orb::before,
+    .hero-orb::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(168,85,247,0.1);
+    }
+
+    .hero-orb::before {
+      inset: 80px;
+    }
+
+    .hero-orb::after {
+      inset: 170px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services {
+      position: relative;
+    }
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+
+      min-height: 430px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.015)
+        );
+
+      overflow: hidden;
+
+      transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+
+      border-color:
+        rgba(168,85,247,0.4);
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.35),
+        0 0 40px rgba(147,51,234,0.08);
+    }
+
+
+    /* =====================================================
+       SERVICE IMAGE AREA
+    ===================================================== */
+
+    .service-visual {
+      height: 190px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: #0c0b10;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.06);
+    }
+
+    .service-visual img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+    }
+
+    .service-card:hover
+    .service-visual img {
+      transform: scale(1.08);
+
+      filter:
+        brightness(1.08)
+        saturate(1.15);
+    }
+
+    /* Dark overlay */
+
+    .service-visual::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(7,7,10,0.15),
+          rgba(147,51,234,0.20)
+        );
+
+      pointer-events: none;
+
+      z-index: 2;
+    }
+
+    /* Purple glow */
+
+    .service-visual::before {
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      border-radius: 50%;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      background:
+        rgba(147,51,234,0.12);
+
+      filter: blur(45px);
+
+      z-index: 1;
+
+      pointer-events: none;
+    }
+
+    .service-number {
+      position: absolute;
+
+      top: 14px;
+      right: 16px;
+
+      z-index: 5;
+
+      padding: 5px 8px;
+
+      border:
+        1px solid rgba(255,255,255,0.15);
+
+      background:
+        rgba(7,7,10,0.65);
+
+      backdrop-filter: blur(8px);
+
+      border-radius: 6px;
+
+      font-size: 10px;
+
+      color: #ddd;
+
+      letter-spacing: 1px;
+    }
+
+    .service-image-label {
+      position: absolute;
+
+      left: 18px;
+      bottom: 15px;
+
+      z-index: 5;
+
+      color: #ffffff;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      text-shadow:
+        0 2px 10px rgba(0,0,0,0.8);
+    }
+
+    .service-content {
+      padding: 25px;
+    }
+
+    .service-content h3 {
+      font-size: 19px;
+
+      margin-bottom: 12px;
+    }
+
+    .service-content p {
+      color: #92929b;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: #c084fc;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      transition: 0.3s ease;
+    }
+
+    .service-link:hover {
+      color: white;
+
+      gap: 12px;
+    }
+
+
+    /* =====================================================
+       OUR WORK
+    ===================================================== */
+
+    .work-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .work-card {
+      min-height: 330px;
+
+      border-radius: 20px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      overflow: hidden;
+
+      position: relative;
+
+      background: #0c0b10;
+    }
+
+    .work-visual {
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(168,85,247,0.35),
+          transparent 35%
+        ),
+
+        linear-gradient(
+          135deg,
+          #120c18,
+          #08080b
+        );
+    }
+
+    .work-visual::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 25px;
+
+      border:
+        1px solid rgba(168,85,247,0.15);
+
+      border-radius: 16px;
+
+      transform: rotate(-4deg);
+    }
+
+    .work-visual::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(192,132,252,0.18);
+
+      right: 15%;
+      top: 20%;
+    }
+
+    .work-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      padding: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.9),
+          transparent 65%
+        );
+    }
+
+    .work-tag {
+      color: #c084fc;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+      margin-bottom: 8px;
+    }
+
+    .work-overlay h3 {
+      font-size: 25px;
+
+      margin-bottom: 6px;
+    }
+
+    .work-overlay p {
+      color: #aaa;
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-wrapper {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size:
+        clamp(38px, 5vw, 60px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 25px;
+    }
+
+    .about-text h2 span {
+      color: #a855f7;
+    }
+
+    .about-text p {
+      color: #a1a1aa;
+
+      font-size: 16px;
+
+      margin-bottom: 18px;
+    }
+
+    .about-stats {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 15px;
+    }
+
+    .stat-card {
+      padding: 28px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 18px;
+
+      background:
+        rgba(255,255,255,0.025);
+    }
+
+    .stat-card strong {
+      display: block;
+
+      font-size: 35px;
+
+      color: #c084fc;
+
+      margin-bottom: 5px;
+    }
+
+    .stat-card span {
+      color: #85858e;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-box {
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(168,85,247,0.22);
+
+      border-radius: 25px;
+
+      padding: 75px 50px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,51,234,0.15),
+          transparent 55%
+        ),
+
+        rgba(255,255,255,0.025);
+    }
+
+    .contact-box h2 {
+      position: relative;
+
+      font-size:
+        clamp(36px, 6vw, 65px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      position: relative;
+
+      max-width: 620px;
+
+      margin: auto;
+
+      color: #a1a1aa;
+
+      margin-bottom: 30px;
+    }
+
+    .contact-buttons {
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding: 35px 0;
+
+      border-top:
+        1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      font-size: 14px;
+    }
+
+    .footer-logo span {
+      color: #a855f7;
+    }
+
+    .footer-copy {
+      color: #66666f;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      width: 55px;
+      height: 55px;
+
+      border-radius: 50%;
+
+      background: #9333ea;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      z-index: 999;
+
+      box-shadow:
+        0 10px 35px rgba(147,51,234,0.4);
+
+      transition: 0.3s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp svg {
+      width: 27px;
+      height: 27px;
+    }
+
+
+    /* =====================================================
+       ANIMATION
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .services-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .about-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .hero-orb {
+        opacity: 0.4;
+
+        right: -350px;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .nav-links,
+      .nav-button {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links.mobile-open {
+
+        position: absolute;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        top: 75px;
+
+        left: 4%;
+        right: 4%;
+
+        padding: 25px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        background:
+          rgba(10,10,14,0.98);
+
+        border-radius: 15px;
+      }
+
+      .hero {
+        min-height: 90vh;
+
+        padding-top: 130px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-orb {
+        width: 450px;
+        height: 450px;
+
+        right: -330px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 420px;
+      }
+
+      .service-visual {
+        height: 210px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card {
+        min-height: 290px;
+      }
+
+      .about-stats {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+      .stat-card {
+        padding: 20px;
+      }
+
+      .contact-box {
+        padding: 60px 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+    }
+
+
+    @media (max-width: 400px) {
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header class="navbar">
+
+    <div class="nav-inner">
+
+      <a href="#home" class="logo">
+        SHERIFFY <span>STUDIO</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="#services">Skills</a>
+        </li>
+
+        <li>
+          <a href="#work">Our Work</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+      <a
+        href="#contact"
+        class="nav-button"
+      >
+        Start a Project
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open Menu"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section
+    class="hero"
+    id="home"
+  >
+
+    <div class="grid-background"></div>
+
+    <div class="hero-orb"></div>
+
     <div class="container">
 
-        <div class="section-header">
-            <span class="section-label">OUR EXPERTISE</span>
-            <h2>Creative Skills. <span>Digital Expertise.</span></h2>
-            <p>
-                A versatile range of creative, technical, marketing, and AI-powered skills.
-            </p>
-        </div>
+      <div class="hero-content reveal">
 
-        <div class="skills-grid">
+        <div class="hero-badge">
 
-            <!-- 01 AI & ANIMATION -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">AI</div>
-                    <div>
-                        <h3>AI & Animation</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
+          <span class="hero-badge-dot"></span>
 
-                <div class="skill-list">
-                    <span class="skill-tag">AI Video Generation</span>
-                    <span class="skill-tag">AI Animation</span>
-                    <span class="skill-tag">Character Animation</span>
-                    <span class="skill-tag">3D Animation</span>
-                    <span class="skill-tag">2D Animation</span>
-                    <span class="skill-tag">AI Character Design</span>
-                    <span class="skill-tag">Motion Graphics</span>
-                    <span class="skill-tag">Visual Effects</span>
-                    <span class="skill-tag">Character Consistency</span>
-                    <span class="skill-tag">Cinematic Animation</span>
-                </div>
-            </div>
-
-
-            <!-- 02 VIDEO PRODUCTION -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">VD</div>
-                    <div>
-                        <h3>Video Production</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Video Editing</span>
-                    <span class="skill-tag">YouTube Video Editing</span>
-                    <span class="skill-tag">Short-Form Video Editing</span>
-                    <span class="skill-tag">Cinematic Editing</span>
-                    <span class="skill-tag">Music Video Editing</span>
-                    <span class="skill-tag">Lyric Video Creation</span>
-                    <span class="skill-tag">Color Grading</span>
-                    <span class="skill-tag">Sound Design</span>
-                    <span class="skill-tag">Motion Graphics</span>
-                    <span class="skill-tag">Storytelling Editing</span>
-                </div>
-            </div>
-
-
-            <!-- 03 MUSIC & AUDIO -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">MU</div>
-                    <div>
-                        <h3>Music & Audio</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Music Production</span>
-                    <span class="skill-tag">Music Composition</span>
-                    <span class="skill-tag">Beat Production</span>
-                    <span class="skill-tag">Song Arrangement</span>
-                    <span class="skill-tag">Cinematic Music</span>
-                    <span class="skill-tag">Film Scoring</span>
-                    <span class="skill-tag">Audio Editing</span>
-                    <span class="skill-tag">Mixing</span>
-                    <span class="skill-tag">Mastering</span>
-                    <span class="skill-tag">Sound Design</span>
-                </div>
-            </div>
-
-
-            <!-- 04 WEB & E-COMMERCE -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">WD</div>
-                    <div>
-                        <h3>Web & E-Commerce</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Website Development</span>
-                    <span class="skill-tag">Website Design</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Landing Page Design</span>
-                    <span class="skill-tag">Portfolio Websites</span>
-                    <span class="skill-tag">Business Websites</span>
-                    <span class="skill-tag">Shopify Development</span>
-                    <span class="skill-tag">Vercel Deployment</span>
-                </div>
-            </div>
-
-
-            <!-- 05 YOUTUBE & CONTENT -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">YT</div>
-                    <div>
-                        <h3>YouTube & Content</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">YouTube Channel Management</span>
-                    <span class="skill-tag">YouTube Automation</span>
-                    <span class="skill-tag">Faceless YouTube Channels</span>
-                    <span class="skill-tag">YouTube SEO</span>
-                    <span class="skill-tag">Keyword Research</span>
-                    <span class="skill-tag">Content Strategy</span>
-                    <span class="skill-tag">YouTube Scriptwriting</span>
-                    <span class="skill-tag">Thumbnail Strategy</span>
-                    <span class="skill-tag">Channel Optimization</span>
-                    <span class="skill-tag">YouTube Monetization</span>
-                </div>
-            </div>
-
-
-            <!-- 06 SOCIAL MEDIA MANAGEMENT -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">SM</div>
-                    <div>
-                        <h3>Social Media Management</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Social Media Strategy</span>
-                    <span class="skill-tag">Content Scheduling</span>
-                    <span class="skill-tag">Instagram Management</span>
-                    <span class="skill-tag">Facebook Management</span>
-                    <span class="skill-tag">TikTok Management</span>
-                    <span class="skill-tag">LinkedIn Management</span>
-                    <span class="skill-tag">Community Management</span>
-                    <span class="skill-tag">Social Media Analytics</span>
-                    <span class="skill-tag">Content Planning</span>
-                    <span class="skill-tag">Organic Growth</span>
-                </div>
-            </div>
-
-
-            <!-- 07 CREATIVE DESIGN -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">CD</div>
-                    <div>
-                        <h3>Creative Design</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Graphic Design</span>
-                    <span class="skill-tag">Brand Identity</span>
-                    <span class="skill-tag">Logo Design</span>
-                    <span class="skill-tag">Social Media Design</span>
-                    <span class="skill-tag">YouTube Thumbnails</span>
-                    <span class="skill-tag">Banner Design</span>
-                    <span class="skill-tag">Poster Design</span>
-                    <span class="skill-tag">Flyer Design</span>
-                    <span class="skill-tag">Photo Editing</span>
-                    <span class="skill-tag">Digital Artwork</span>
-                </div>
-            </div>
-
-
-            <!-- 08 DIGITAL MARKETING -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">DM</div>
-                    <div>
-                        <h3>Digital Marketing</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Digital Marketing</span>
-                    <span class="skill-tag">Social Media Marketing</span>
-                    <span class="skill-tag">YouTube Marketing</span>
-                    <span class="skill-tag">Content Marketing</span>
-                    <span class="skill-tag">Google Ads</span>
-                    <span class="skill-tag">Social Media Advertising</span>
-                    <span class="skill-tag">Email Marketing</span>
-                    <span class="skill-tag">Lead Generation</span>
-                    <span class="skill-tag">Campaign Management</span>
-                    <span class="skill-tag">Marketing Strategy</span>
-                </div>
-            </div>
-
-
-            <!-- 09 PROMOTION & BRAND GROWTH -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">PG</div>
-                    <div>
-                        <h3>Promotion & Brand Growth</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Brand Promotion</span>
-                    <span class="skill-tag">Product Promotion</span>
-                    <span class="skill-tag">Artist Promotion</span>
-                    <span class="skill-tag">Music Marketing</span>
-                    <span class="skill-tag">YouTube Promotion</span>
-                    <span class="skill-tag">Social Media Promotion</span>
-                    <span class="skill-tag">Influencer Outreach</span>
-                    <span class="skill-tag">Audience Development</span>
-                    <span class="skill-tag">Brand Awareness</span>
-                    <span class="skill-tag">Growth Strategy</span>
-                </div>
-            </div>
-
-
-            <!-- 10 SEO & AI AUTOMATION -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">AX</div>
-                    <div>
-                        <h3>SEO & AI Automation</h3>
-                        <span>10 Skills</span>
-                    </div>
-                </div>
-
-                <div class="skill-list">
-                    <span class="skill-tag">Search Engine Optimization</span>
-                    <span class="skill-tag">On-Page SEO</span>
-                    <span class="skill-tag">Technical SEO</span>
-                    <span class="skill-tag">Keyword Research</span>
-                    <span class="skill-tag">Competitor SEO Analysis</span>
-                    <span class="skill-tag">Local SEO</span>
-                    <span class="skill-tag">AI Workflow Automation</span>
-                    <span class="skill-tag">AI Content Creation</span>
-                    <span class="skill-tag">AI Prompt Engineering</span>
-                    <span class="skill-tag">Marketing Automation</span>
-                </div>
-            </div>
+          CREATIVE DIGITAL STUDIO
 
         </div>
+
+        <h1>
+          We turn ideas into
+          <span>digital growth.</span>
+        </h1>
+
+        <p class="hero-description">
+
+          Sheriffy Studio helps brands, creators, artists
+          and businesses build stronger digital identities
+          through marketing, content, YouTube growth,
+          music promotion, SEO and modern web development.
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            Start a Project →
+          </a>
+
+          <a
+            href="#work"
+            class="btn btn-secondary"
+          >
+            View Our Work ↗
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
-</section>
+
+  </section>
+
+
+  <!-- =====================================================
+       SERVICES
+  ====================================================== -->
+
+  <section
+    class="section services"
+    id="services"
+  >
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="section-label">
+          My Services
+        </div>
+
+        <h2>
+          Skills That Drive
+          <span>Digital Growth</span>
+        </h2>
+
+        <p>
+
+          I provide creative digital solutions designed to
+          help brands, creators, artists and businesses build
+          their presence, reach more people and grow online.
+
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+
+        <!-- =================================================
+             01 DIGITAL MARKETING
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/digital-marketing.jpg"
+              alt="Digital Marketing"
+            >
+
+            <span class="service-number">
+              01
+            </span>
+
+            <span class="service-image-label">
+              Digital Growth
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Digital Marketing
+            </h3>
+
+            <p>
+              Strategic online marketing to grow brands,
+              reach customers and increase conversions.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             02 SOCIAL MEDIA MARKETING
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/social-media-marketing.jpg"
+              alt="Social Media Marketing"
+            >
+
+            <span class="service-number">
+              02
+            </span>
+
+            <span class="service-image-label">
+              Social Growth
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Social Media Marketing
+            </h3>
+
+            <p>
+              Building engaging social media strategies,
+              content and campaigns that grow audiences.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             03 YOUTUBE MARKETING
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/youtube-marketing.jpg"
+              alt="YouTube Marketing"
+            >
+
+            <span class="service-number">
+              03
+            </span>
+
+            <span class="service-image-label">
+              YouTube Growth
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              YouTube Marketing
+            </h3>
+
+            <p>
+              Promoting videos and channels to increase views,
+              subscribers, engagement and visibility.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             04 MUSIC PROMOTION
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/music-promotion.jpg"
+              alt="Music Promotion"
+            >
+
+            <span class="service-number">
+              04
+            </span>
+
+            <span class="service-image-label">
+              Artist Promotion
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Music Promotion
+            </h3>
+
+            <p>
+              Helping artists promote their music, reach new
+              audiences and build their online presence.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             05 YOUTUBE CHANNEL MANAGEMENT
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/youtube-channel-management.jpg"
+              alt="YouTube Channel Management"
+            >
+
+            <span class="service-number">
+              05
+            </span>
+
+            <span class="service-image-label">
+              Channel Management
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              YouTube Channel Management
+            </h3>
+
+            <p>
+              Managing content, uploads, optimization,
+              analytics and overall channel growth.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             06 YOUTUBE AUTOMATION
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/youtube-automation.jpg"
+              alt="YouTube Automation"
+            >
+
+            <span class="service-number">
+              06
+            </span>
+
+            <span class="service-image-label">
+              Automation
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              YouTube Automation
+            </h3>
+
+            <p>
+              Building and managing efficient faceless YouTube
+              channels using strategic content systems.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             07 YOUTUBE SEO
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/youtube-seo.jpg"
+              alt="YouTube SEO"
+            >
+
+            <span class="service-number">
+              07
+            </span>
+
+            <span class="service-image-label">
+              Search Optimization
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              YouTube SEO
+            </h3>
+
+            <p>
+              Optimizing titles, descriptions, keywords, tags
+              and content to improve search visibility.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- =================================================
+             08 WEB DEVELOPMENT
+        ================================================== -->
+
+        <article class="service-card reveal">
+
+          <div class="service-visual">
+
+            <img
+              src="images/web-development.jpg"
+              alt="Web Development"
+            >
+
+            <span class="service-number">
+              08
+            </span>
+
+            <span class="service-image-label">
+              Digital Experience
+            </span>
+
+          </div>
+
+          <div class="service-content">
+
+            <h3>
+              Web Development
+            </h3>
+
+            <p>
+              Creating modern, responsive and professional
+              websites designed to showcase brands and
+              convert visitors.
+            </p>
+
+            <a
+              href="#contact"
+              class="service-link"
+            >
+              Get Started →
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       OUR WORK
+  ====================================================== -->
+
+  <section
+    class="section"
+    id="work"
+  >
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="section-label">
+          Our Work
+        </div>
+
+        <h2>
+          Creative work built for
+          <span>attention.</span>
+        </h2>
+
+        <p>
+          From digital campaigns to YouTube growth systems,
+          every project is designed to make brands more visible,
+          engaging and memorable.
+        </p>
+
+      </div>
+
+
+      <div class="work-grid">
+
+
+        <div class="work-card reveal">
+
+          <div class="work-visual"></div>
+
+          <div class="work-overlay">
+
+            <div class="work-tag">
+              YouTube Growth
+            </div>
+
+            <h3>
+              Channel Strategy
+            </h3>
+
+            <p>
+              Content optimization, SEO and growth strategy.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="work-card reveal">
+
+          <div
+            class="work-visual"
+            style="
+              background:
+              radial-gradient(
+                circle at 30% 35%,
+                rgba(192,132,252,0.35),
+                transparent 35%
+              ),
+              linear-gradient(
+                135deg,
+                #0e1018,
+                #09070c
+              );
+            "
+          ></div>
+
+          <div class="work-overlay">
+
+            <div class="work-tag">
+              Digital Marketing
+            </div>
+
+            <h3>
+              Brand Promotion
+            </h3>
+
+            <p>
+              Strategic digital campaigns designed for growth.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="work-card reveal">
+
+          <div
+            class="work-visual"
+            style="
+              background:
+              radial-gradient(
+                circle at 65% 25%,
+                rgba(147,51,234,0.4),
+                transparent 32%
+              ),
+              linear-gradient(
+                135deg,
+                #160b1d,
+                #08080b
+              );
+            "
+          ></div>
+
+          <div class="work-overlay">
+
+            <div class="work-tag">
+              Music Promotion
+            </div>
+
+            <h3>
+              Artist Visibility
+            </h3>
+
+            <p>
+              Digital promotion designed to connect artists
+              with new audiences.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="work-card reveal">
+
+          <div
+            class="work-visual"
+            style="
+              background:
+              radial-gradient(
+                circle at 45% 35%,
+                rgba(168,85,247,0.4),
+                transparent 30%
+              ),
+              linear-gradient(
+                135deg,
+                #090c15,
+                #08080b
+              );
+            "
+          ></div>
+
+          <div class="work-overlay">
+
+            <div class="work-tag">
+              Web Development
+            </div>
+
+            <h3>
+              Digital Experiences
+            </h3>
+
+            <p>
+              Modern websites built to showcase brands
+              professionally.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
+
+  <section
+    class="section"
+    id="about"
+  >
+
+    <div class="container">
+
+      <div class="about-wrapper">
+
+
+        <div class="about-text reveal">
+
+          <div class="section-label">
+            About Sheriffy Studio
+          </div>
+
+          <h2>
+            Creative thinking.
+            <span>Digital execution.</span>
+          </h2>
+
+          <p>
+            Sheriffy Studio is a creative digital studio focused
+            on helping businesses, creators and artists establish
+            a stronger online presence.
+          </p>
+
+          <p>
+            From digital marketing and social media to YouTube
+            management, SEO, automation, music promotion and
+            web development, I combine strategy and creativity
+            to help projects stand out online.
+          </p>
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+            style="margin-top:15px;"
+          >
+            Let's Work Together →
+          </a>
+
+        </div>
+
+
+        <div class="about-stats reveal">
+
+          <div class="stat-card">
+
+            <strong>08+</strong>
+
+            <span>
+              Digital Services
+            </span>
+
+          </div>
+
+          <div class="stat-card">
+
+            <strong>360°</strong>
+
+            <span>
+              Digital Solutions
+            </span>
+
+          </div>
+
+          <div class="stat-card">
+
+            <strong>24/7</strong>
+
+            <span>
+              Online Presence
+            </span>
+
+          </div>
+
+          <div class="stat-card">
+
+            <strong>∞</strong>
+
+            <span>
+              Creative Possibilities
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+
+  <section
+    class="section"
+    id="contact"
+  >
+
+    <div class="container">
+
+      <div class="contact-box reveal">
+
+        <div class="section-label">
+          Start a Project
+        </div>
+
+        <h2>
+          Have an idea?
+          <br>
+          Let's build it.
+        </h2>
+
+        <p>
+
+          Tell me what you're working on and let's create a
+          digital strategy, content system, website or marketing
+          solution that moves your project forward.
+
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="https://wa.me/2349035908327"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Chat on WhatsApp →
+          </a>
+
+          <a
+            href="mailto:digitalmarketings310@gmail.com"
+            class="btn btn-secondary"
+          >
+            Send an Email →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          SHERIFFY <span>STUDIO</span>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 Sheriffy Studio. All rights reserved.
+        </div>
+
+        <div class="footer-copy">
+          Creative Digital Studio.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
+
+  <a
+    href="https://wa.me/2349035908327"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp"
+    aria-label="Chat on WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <path
+        d="M20 11.5C20 16.194 16.194 20 11.5 20C10.115 20 8.806 19.668 7.665 19.086L4 20L4.951 16.474C4.351 15.331 4 14.011 4 12.608C4 7.914 7.806 4.108 12.5 4.108C17.194 4.108 20 7.914 20 11.5Z"
+        stroke="white"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+      <path
+        d="M9 10.5C9.3 12.1 10.4 13.7 12.2 14.5C12.7 14.7 13.3 14.8 13.7 14.5L14.6 13.8"
+        stroke="white"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      />
+
+    </svg>
+
+  </a>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        navLinks.classList.toggle(
+          "mobile-open"
+        );
+
+      }
+    );
+
+
+    /* CLOSE MOBILE MENU */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove(
+              "mobile-open"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* SCROLL REVEAL */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+
+      const windowHeight =
+        window.innerHeight;
+
+      revealElements.forEach(element => {
+
+        const elementTop =
+          element
+            .getBoundingClientRect()
+            .top;
+
+        if (
+          elementTop <
+          windowHeight - 80
+        ) {
+
+          element.classList.add(
+            "active"
+          );
+
+        }
+
+      });
+
+    };
+
+    window.addEventListener(
+      "scroll",
+      revealOnScroll
+    );
+
+    revealOnScroll();
+
+
+    /* NAVBAR SCROLL EFFECT */
+
+    const navbar =
+      document.querySelector(".navbar");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        if (window.scrollY > 50) {
+
+          navbar.style.background =
+            "rgba(7, 7, 10, 0.96)";
+
+        } else {
+
+          navbar.style.background =
+            "rgba(7, 7, 10, 0.80)";
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
