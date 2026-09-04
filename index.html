@@ -411,7 +411,6 @@
 
     /* =========================================================
        SERVICES
-       UPDATED WITH REAL SERVICE IMAGES
     ========================================================= */
 
     .services {
@@ -426,7 +425,7 @@
 
     .service-card {
       position: relative;
-      min-height: 430px;
+      min-height: 450px;
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 20px;
       background:
@@ -446,20 +445,20 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      border-color: rgba(168,85,247,0.4);
+      border-color: rgba(168,85,247,0.45);
       box-shadow:
         0 25px 70px rgba(0,0,0,0.35),
-        0 0 40px rgba(147,51,234,0.12);
+        0 0 40px rgba(147,51,234,0.15);
     }
 
 
     /* =========================================================
-       SERVICE IMAGE
+       SERVICE IMAGES
     ========================================================= */
 
     .service-image-wrapper {
-      height: 205px;
-      min-height: 205px;
+      height: 220px;
+      min-height: 220px;
       position: relative;
       overflow: hidden;
       background: #0c0b10;
@@ -476,12 +475,9 @@
     }
 
     .service-card:hover .service-image {
-      transform: scale(1.08);
-      filter: brightness(1.08);
+      transform: scale(1.09);
+      filter: brightness(1.12);
     }
-
-
-    /* Dark premium overlay */
 
     .service-image-wrapper::after {
       content: "";
@@ -491,11 +487,11 @@
         linear-gradient(
           to bottom,
           rgba(7,7,10,0.05),
-          rgba(7,7,10,0.2) 45%,
-          rgba(7,7,10,0.78)
+          rgba(7,7,10,0.15) 35%,
+          rgba(7,7,10,0.85)
         );
       pointer-events: none;
-      transition: background 0.4s ease;
+      transition: 0.4s ease;
     }
 
     .service-card:hover
@@ -504,31 +500,35 @@
         linear-gradient(
           to bottom,
           rgba(7,7,10,0.08),
-          rgba(7,7,10,0.25) 40%,
-          rgba(7,7,10,0.88)
+          rgba(7,7,10,0.18) 35%,
+          rgba(7,7,10,0.92)
         );
     }
 
 
-    /* Purple glow */
+    /* =========================================================
+       IMAGE GLOW
+    ========================================================= */
 
     .service-image-wrapper::before {
       content: "";
       position: absolute;
-      width: 150px;
-      height: 150px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(147,51,234,0.12);
-      filter: blur(50px);
+      background: rgba(147,51,234,0.16);
+      filter: blur(55px);
       z-index: 1;
       pointer-events: none;
     }
 
 
-    /* Service number */
+    /* =========================================================
+       SERVICE NUMBER
+    ========================================================= */
 
     .service-number {
       position: absolute;
@@ -537,16 +537,18 @@
       font-size: 11px;
       color: #ffffff;
       letter-spacing: 1px;
-      z-index: 4;
+      z-index: 5;
       padding: 6px 9px;
       border-radius: 8px;
-      background: rgba(7,7,10,0.55);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(7,7,10,0.65);
+      border: 1px solid rgba(255,255,255,0.12);
       backdrop-filter: blur(8px);
     }
 
 
-    /* Small service badge */
+    /* =========================================================
+       SERVICE BADGE
+    ========================================================= */
 
     .service-badge {
       position: absolute;
@@ -555,9 +557,9 @@
       z-index: 5;
       padding: 6px 10px;
       border-radius: 8px;
-      background: rgba(7,7,10,0.65);
-      border: 1px solid rgba(192,132,252,0.2);
-      backdrop-filter: blur(8px);
+      background: rgba(7,7,10,0.72);
+      border: 1px solid rgba(192,132,252,0.25);
+      backdrop-filter: blur(10px);
       color: #d8b4fe;
       font-size: 10px;
       font-weight: 700;
@@ -1007,12 +1009,12 @@
       }
 
       .service-card {
-        min-height: 420px;
+        min-height: 430px;
       }
 
       .service-image-wrapper {
-        height: 220px;
-        min-height: 220px;
+        height: 230px;
+        min-height: 230px;
       }
 
       .work-grid {
@@ -1085,19 +1087,27 @@
       <ul class="nav-links" id="navLinks">
 
         <li>
-          <a href="#services">Skills</a>
+          <a href="#services">
+            Skills
+          </a>
         </li>
 
         <li>
-          <a href="#work">Our Work</a>
+          <a href="#work">
+            Our Work
+          </a>
         </li>
 
         <li>
-          <a href="#about">About</a>
+          <a href="#about">
+            About
+          </a>
         </li>
 
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">
+            Contact
+          </a>
         </li>
 
       </ul>
@@ -1185,7 +1195,6 @@
 
   <!-- =======================================================
        SERVICES
-       IMAGE-BASED VERSION
   ======================================================== -->
 
   <section
@@ -1227,11 +1236,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/digital-marketing.jpg"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
               alt="Digital Marketing Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1278,11 +1287,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/social-media-marketing.jpg"
+              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1000&q=85"
               alt="Social Media Marketing Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1329,11 +1338,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/youtube-marketing.jpg"
+              src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1000&q=85"
               alt="YouTube Marketing Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1380,11 +1389,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/music-promotion.jpg"
+              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=85"
               alt="Music Promotion Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1431,11 +1440,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/youtube-channel-management.jpg"
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
               alt="YouTube Channel Management Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1482,11 +1491,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/youtube-automation.jpg"
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
               alt="YouTube Automation Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1533,11 +1542,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/youtube-seo.jpg"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
               alt="YouTube SEO Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
@@ -1585,11 +1594,11 @@
           <div class="service-image-wrapper">
 
             <img
-              src="images/services/web-development.jpg"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
               alt="Web Development Services"
               class="service-image"
-              width="800"
-              height="500"
+              width="1000"
+              height="650"
               loading="lazy"
               decoding="async"
             />
