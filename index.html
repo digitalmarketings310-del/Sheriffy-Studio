@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <meta
     name="description"
-    content="Sheriffy Studio provides professional digital marketing, social media marketing, YouTube marketing, music promotion, YouTube channel management, YouTube automation, YouTube SEO and web development services."
-  >
+    content="Sheriffy Studio provides professional digital marketing, social media marketing, YouTube marketing, music promotion, YouTube management, automation, SEO, and web development services."
+  />
 
   <meta
     name="keywords"
-    content="Digital Marketing, Social Media Marketing, YouTube Marketing, Music Promotion, YouTube Automation, YouTube SEO, Web Development"
-  >
+    content="digital marketing, social media marketing, YouTube marketing, music promotion, YouTube SEO, YouTube automation, web development, YouTube channel management"
+  />
 
-  <meta name="author" content="Sheriffy Studio">
+  <meta name="author" content="Sheriffy Studio" />
 
   <title>Sheriffy Studio | Digital Marketing & Creative Studio</title>
 
   <style>
 
-    /* =====================================================
+    /* =========================================================
        RESET
-    ===================================================== */
+    ========================================================= */
 
     * {
       margin: 0;
@@ -47,20 +51,26 @@
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img,
+    svg {
       display: block;
+      max-width: 100%;
     }
 
     ::selection {
       background: #9333ea;
-      color: white;
+      color: #ffffff;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        GLOBAL
-    ===================================================== */
+    ========================================================= */
 
     .container {
       width: min(1180px, 92%);
@@ -119,17 +129,17 @@
     }
 
 
-    /* =====================================================
-       BACKGROUND
-    ===================================================== */
+    /* =========================================================
+       BACKGROUND EFFECTS
+    ========================================================= */
 
     .background-glow {
       position: fixed;
       width: 500px;
       height: 500px;
       border-radius: 50%;
-      background: rgba(147, 51, 234, 0.08);
-      filter: blur(110px);
+      background: rgba(147, 51, 234, 0.09);
+      filter: blur(100px);
       pointer-events: none;
       z-index: -2;
     }
@@ -147,7 +157,6 @@
     .grid-background {
       position: absolute;
       inset: 0;
-
       background-image:
         linear-gradient(
           rgba(255,255,255,0.025) 1px,
@@ -158,22 +167,19 @@
           rgba(255,255,255,0.025) 1px,
           transparent 1px
         );
-
       background-size: 50px 50px;
-
       mask-image: linear-gradient(
         to bottom,
         black,
         transparent
       );
-
       pointer-events: none;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        NAVBAR
-    ===================================================== */
+    ========================================================= */
 
     .navbar {
       position: fixed;
@@ -181,25 +187,18 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-
       padding: 18px 0;
-
-      background: rgba(7, 7, 10, 0.80);
-
+      background: rgba(7, 7, 10, 0.78);
       backdrop-filter: blur(18px);
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .nav-inner {
       width: min(1180px, 92%);
       margin: auto;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 30px;
     }
 
@@ -228,80 +227,59 @@
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #ffffff;
     }
 
     .nav-button {
       padding: 12px 20px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #9333ea,
-          #7e22ce
-        );
-
+      background: linear-gradient(
+        135deg,
+        #9333ea,
+        #7e22ce
+      );
       border-radius: 10px;
-
       font-size: 13px;
       font-weight: 700;
-
-      box-shadow:
-        0 10px 30px rgba(147,51,234,0.2);
-
+      box-shadow: 0 10px 30px rgba(147,51,234,0.2);
       transition: 0.3s ease;
+      white-space: nowrap;
     }
 
     .nav-button:hover {
       transform: translateY(-2px);
-
       box-shadow:
         0 15px 40px rgba(147,51,234,0.35);
     }
 
     .menu-button {
       display: none;
-
       width: 42px;
       height: 42px;
-
-      border:
-        1px solid rgba(255,255,255,0.1);
-
-      background:
-        rgba(255,255,255,0.03);
-
-      color: white;
-
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: #fff;
       border-radius: 10px;
-
       font-size: 20px;
-
       cursor: pointer;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        HERO
-    ===================================================== */
+    ========================================================= */
 
     .hero {
       min-height: 100vh;
-
       display: flex;
       align-items: center;
-
       position: relative;
-
       overflow: hidden;
-
       padding-top: 120px;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-
       max-width: 850px;
     }
 
@@ -309,71 +287,48 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-
-      border:
-        1px solid rgba(168,85,247,0.3);
-
-      background:
-        rgba(147,51,234,0.08);
-
+      border: 1px solid rgba(168,85,247,0.3);
+      background: rgba(147,51,234,0.08);
       padding: 9px 15px;
-
       border-radius: 50px;
-
       color: #d8b4fe;
-
       font-size: 12px;
       font-weight: 700;
-
       letter-spacing: 1.5px;
-
       margin-bottom: 28px;
     }
 
     .hero-badge-dot {
       width: 7px;
       height: 7px;
-
       border-radius: 50%;
-
       background: #a855f7;
-
-      box-shadow:
-        0 0 15px #a855f7;
+      box-shadow: 0 0 15px #a855f7;
     }
 
     .hero h1 {
       font-size: clamp(48px, 8vw, 92px);
-
       line-height: 0.98;
-
       letter-spacing: -5px;
-
       margin-bottom: 30px;
     }
 
     .hero h1 span {
-      background:
-        linear-gradient(
-          135deg,
-          #c084fc,
-          #9333ea,
-          #e9d5ff
-        );
-
+      background: linear-gradient(
+        135deg,
+        #c084fc,
+        #9333ea,
+        #e9d5ff
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
       background-clip: text;
     }
 
     .hero-description {
       max-width: 690px;
-
       color: #a1a1aa;
-
       font-size: 18px;
-
       margin-bottom: 38px;
     }
 
@@ -387,74 +342,51 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       gap: 9px;
-
       padding: 15px 24px;
-
       border-radius: 10px;
-
       font-size: 14px;
       font-weight: 700;
-
       transition: 0.3s ease;
     }
 
     .btn-primary {
-      background:
-        linear-gradient(
-          135deg,
-          #9333ea,
-          #7e22ce
-        );
-
+      background: linear-gradient(
+        135deg,
+        #9333ea,
+        #7e22ce
+      );
       box-shadow:
         0 15px 40px rgba(147,51,234,0.2);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-
       box-shadow:
         0 20px 50px rgba(147,51,234,0.35);
     }
 
     .btn-secondary {
-      border:
-        1px solid rgba(255,255,255,0.1);
-
-      background:
-        rgba(255,255,255,0.03);
-
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
       color: #ddd;
     }
 
     .btn-secondary:hover {
-      border-color:
-        rgba(168,85,247,0.5);
-
-      background:
-        rgba(147,51,234,0.08);
-
+      border-color: rgba(168,85,247,0.5);
+      background: rgba(147,51,234,0.08);
       transform: translateY(-3px);
     }
 
     .hero-orb {
       position: absolute;
-
       width: 650px;
       height: 650px;
-
       border-radius: 50%;
-
       right: -200px;
       top: 50%;
-
       transform: translateY(-50%);
-
-      border:
-        1px solid rgba(168,85,247,0.13);
-
+      border: 1px solid rgba(168,85,247,0.13);
       box-shadow:
         inset 0 0 100px rgba(147,51,234,0.08),
         0 0 100px rgba(147,51,234,0.05);
@@ -463,13 +395,9 @@
     .hero-orb::before,
     .hero-orb::after {
       content: "";
-
       position: absolute;
-
       border-radius: 50%;
-
-      border:
-        1px solid rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.1);
     }
 
     .hero-orb::before {
@@ -481,9 +409,10 @@
     }
 
 
-    /* =====================================================
+    /* =========================================================
        SERVICES
-    ===================================================== */
+       UPDATED WITH REAL SERVICE IMAGES
+    ========================================================= */
 
     .services {
       position: relative;
@@ -491,32 +420,24 @@
 
     .services-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
     .service-card {
       position: relative;
-
       min-height: 430px;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 20px;
-
       background:
         linear-gradient(
           145deg,
           rgba(255,255,255,0.055),
           rgba(255,255,255,0.015)
         );
-
       overflow: hidden;
-
+      display: flex;
+      flex-direction: column;
       transition:
         transform 0.4s ease,
         border-color 0.4s ease,
@@ -525,236 +446,207 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-
-      border-color:
-        rgba(168,85,247,0.4);
-
+      border-color: rgba(168,85,247,0.4);
       box-shadow:
         0 25px 70px rgba(0,0,0,0.35),
-        0 0 40px rgba(147,51,234,0.08);
+        0 0 40px rgba(147,51,234,0.12);
     }
 
 
-    /* =====================================================
-       SERVICE IMAGE AREA
-    ===================================================== */
+    /* =========================================================
+       SERVICE IMAGE
+    ========================================================= */
 
-    .service-visual {
-      height: 190px;
-
+    .service-image-wrapper {
+      height: 205px;
+      min-height: 205px;
       position: relative;
-
       overflow: hidden;
-
       background: #0c0b10;
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.06);
     }
 
-    .service-visual img {
+    .service-image {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
-
       object-position: center;
-
       transition:
-        transform 0.6s ease,
-        filter 0.6s ease;
+        transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.5s ease;
+    }
+
+    .service-card:hover .service-image {
+      transform: scale(1.08);
+      filter: brightness(1.08);
+    }
+
+
+    /* Dark premium overlay */
+
+    .service-image-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(7,7,10,0.05),
+          rgba(7,7,10,0.2) 45%,
+          rgba(7,7,10,0.78)
+        );
+      pointer-events: none;
+      transition: background 0.4s ease;
     }
 
     .service-card:hover
-    .service-visual img {
-      transform: scale(1.08);
-
-      filter:
-        brightness(1.08)
-        saturate(1.15);
-    }
-
-    /* Dark overlay */
-
-    .service-visual::after {
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
+    .service-image-wrapper::after {
       background:
         linear-gradient(
-          135deg,
-          rgba(7,7,10,0.15),
-          rgba(147,51,234,0.20)
+          to bottom,
+          rgba(7,7,10,0.08),
+          rgba(7,7,10,0.25) 40%,
+          rgba(7,7,10,0.88)
         );
-
-      pointer-events: none;
-
-      z-index: 2;
     }
+
 
     /* Purple glow */
 
-    .service-visual::before {
+    .service-image-wrapper::before {
       content: "";
-
       position: absolute;
-
       width: 150px;
       height: 150px;
-
       border-radius: 50%;
-
       left: 50%;
       top: 50%;
-
-      transform:
-        translate(-50%, -50%);
-
-      background:
-        rgba(147,51,234,0.12);
-
-      filter: blur(45px);
-
+      transform: translate(-50%, -50%);
+      background: rgba(147,51,234,0.12);
+      filter: blur(50px);
       z-index: 1;
-
       pointer-events: none;
     }
 
+
+    /* Service number */
+
     .service-number {
       position: absolute;
-
-      top: 14px;
-      right: 16px;
-
-      z-index: 5;
-
-      padding: 5px 8px;
-
-      border:
-        1px solid rgba(255,255,255,0.15);
-
-      background:
-        rgba(7,7,10,0.65);
-
-      backdrop-filter: blur(8px);
-
-      border-radius: 6px;
-
-      font-size: 10px;
-
-      color: #ddd;
-
-      letter-spacing: 1px;
-    }
-
-    .service-image-label {
-      position: absolute;
-
-      left: 18px;
-      bottom: 15px;
-
-      z-index: 5;
-
-      color: #ffffff;
-
+      top: 15px;
+      right: 17px;
       font-size: 11px;
-
-      font-weight: 700;
-
+      color: #ffffff;
       letter-spacing: 1px;
-
-      text-transform: uppercase;
-
-      text-shadow:
-        0 2px 10px rgba(0,0,0,0.8);
+      z-index: 4;
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: rgba(7,7,10,0.55);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
     }
+
+
+    /* Small service badge */
+
+    .service-badge {
+      position: absolute;
+      left: 16px;
+      bottom: 15px;
+      z-index: 5;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(7,7,10,0.65);
+      border: 1px solid rgba(192,132,252,0.2);
+      backdrop-filter: blur(8px);
+      color: #d8b4fe;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       SERVICE CONTENT
+    ========================================================= */
 
     .service-content {
-      padding: 25px;
+      padding: 23px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .service-content h3 {
-      font-size: 19px;
-
-      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 10px;
     }
 
     .service-content p {
       color: #92929b;
-
       font-size: 13px;
-
       line-height: 1.7;
-
       margin-bottom: 20px;
+      flex: 1;
     }
 
     .service-link {
+      align-self: flex-start;
       display: inline-flex;
-
       align-items: center;
-
+      justify-content: center;
       gap: 8px;
-
+      padding: 9px 13px;
+      border-radius: 8px;
+      border: 1px solid rgba(168,85,247,0.22);
+      background: rgba(147,51,234,0.07);
       color: #c084fc;
-
-      font-size: 12px;
-
+      font-size: 11px;
       font-weight: 700;
-
-      transition: 0.3s ease;
+      transition:
+        0.3s ease,
+        box-shadow 0.3s ease;
     }
 
     .service-link:hover {
-      color: white;
-
-      gap: 12px;
+      color: #ffffff;
+      background: rgba(147,51,234,0.2);
+      border-color: rgba(168,85,247,0.55);
+      transform: translateX(3px);
+      box-shadow:
+        0 8px 25px rgba(147,51,234,0.15);
     }
 
 
-    /* =====================================================
-       OUR WORK
-    ===================================================== */
+    /* =========================================================
+       WORK
+    ========================================================= */
 
     .work-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
     .work-card {
       min-height: 330px;
-
       border-radius: 20px;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
+      border: 1px solid rgba(255,255,255,0.08);
       overflow: hidden;
-
       position: relative;
-
       background: #0c0b10;
     }
 
     .work-visual {
       position: absolute;
-
       inset: 0;
-
       background:
         radial-gradient(
           circle at 70% 30%,
           rgba(168,85,247,0.35),
           transparent 35%
         ),
-
         linear-gradient(
           135deg,
           #120c18,
@@ -764,49 +656,31 @@
 
     .work-visual::before {
       content: "";
-
       position: absolute;
-
       inset: 25px;
-
-      border:
-        1px solid rgba(168,85,247,0.15);
-
+      border: 1px solid rgba(168,85,247,0.15);
       border-radius: 16px;
-
       transform: rotate(-4deg);
     }
 
     .work-visual::after {
       content: "";
-
       position: absolute;
-
       width: 180px;
       height: 180px;
-
       border-radius: 50%;
-
-      border:
-        1px solid rgba(192,132,252,0.18);
-
+      border: 1px solid rgba(192,132,252,0.18);
       right: 15%;
       top: 20%;
     }
 
     .work-overlay {
       position: absolute;
-
       inset: 0;
-
       padding: 30px;
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: flex-end;
-
       background:
         linear-gradient(
           to top,
@@ -817,54 +691,39 @@
 
     .work-tag {
       color: #c084fc;
-
       text-transform: uppercase;
-
       letter-spacing: 1.5px;
-
       font-size: 10px;
-
       font-weight: 700;
-
       margin-bottom: 8px;
     }
 
     .work-overlay h3 {
       font-size: 25px;
-
       margin-bottom: 6px;
     }
 
     .work-overlay p {
       color: #aaa;
-
       font-size: 13px;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        ABOUT
-    ===================================================== */
+    ========================================================= */
 
     .about-wrapper {
       display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
+      grid-template-columns: 1fr 1fr;
       gap: 80px;
-
       align-items: center;
     }
 
     .about-text h2 {
-      font-size:
-        clamp(38px, 5vw, 60px);
-
+      font-size: clamp(38px, 5vw, 60px);
       line-height: 1.05;
-
       letter-spacing: -2px;
-
       margin-bottom: 25px;
     }
 
@@ -874,142 +733,112 @@
 
     .about-text p {
       color: #a1a1aa;
-
       font-size: 16px;
-
       margin-bottom: 18px;
     }
 
     .about-stats {
       display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
     }
 
     .stat-card {
       padding: 28px;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
-
-      background:
-        rgba(255,255,255,0.025);
+      background: rgba(255,255,255,0.025);
     }
 
     .stat-card strong {
       display: block;
-
       font-size: 35px;
-
       color: #c084fc;
-
       margin-bottom: 5px;
     }
 
     .stat-card span {
       color: #85858e;
-
       font-size: 12px;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        CONTACT
-    ===================================================== */
+    ========================================================= */
 
     .contact-box {
       position: relative;
-
       overflow: hidden;
-
-      border:
-        1px solid rgba(168,85,247,0.22);
-
+      border: 1px solid rgba(168,85,247,0.22);
       border-radius: 25px;
-
       padding: 75px 50px;
-
       text-align: center;
-
       background:
         radial-gradient(
           circle at center,
           rgba(147,51,234,0.15),
           transparent 55%
         ),
-
         rgba(255,255,255,0.025);
+    }
+
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      border: 1px solid rgba(168,85,247,0.1);
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .contact-box h2 {
       position: relative;
-
-      font-size:
-        clamp(36px, 6vw, 65px);
-
+      font-size: clamp(36px, 6vw, 65px);
       line-height: 1;
-
       letter-spacing: -3px;
-
       margin-bottom: 20px;
     }
 
     .contact-box p {
       position: relative;
-
       max-width: 620px;
-
       margin: auto;
-
       color: #a1a1aa;
-
       margin-bottom: 30px;
     }
 
     .contact-buttons {
       position: relative;
-
       display: flex;
-
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        FOOTER
-    ===================================================== */
+    ========================================================= */
 
     footer {
       padding: 35px 0;
-
-      border-top:
-        1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
     .footer-inner {
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
       gap: 20px;
     }
 
     .footer-logo {
       font-weight: 800;
-
       letter-spacing: 1.5px;
-
       font-size: 14px;
     }
 
@@ -1019,38 +848,28 @@
 
     .footer-copy {
       color: #66666f;
-
       font-size: 12px;
     }
 
 
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
+    /* =========================================================
+       FLOATING WHATSAPP
+    ========================================================= */
 
     .whatsapp {
       position: fixed;
-
       right: 22px;
       bottom: 22px;
-
       width: 55px;
       height: 55px;
-
       border-radius: 50%;
-
       background: #9333ea;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       z-index: 999;
-
       box-shadow:
         0 10px 35px rgba(147,51,234,0.4);
-
       transition: 0.3s ease;
     }
 
@@ -1064,16 +883,13 @@
     }
 
 
-    /* =====================================================
-       ANIMATION
-    ===================================================== */
+    /* =========================================================
+       ANIMATIONS
+    ========================================================= */
 
     .reveal {
       opacity: 0;
-
-      transform:
-        translateY(30px);
-
+      transform: translateY(30px);
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
@@ -1081,41 +897,52 @@
 
     .reveal.active {
       opacity: 1;
+      transform: translateY(0);
+    }
 
-      transform:
-        translateY(0);
+    @keyframes float {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+
+    }
+
+    .hero-badge {
+      animation: float 4s ease-in-out infinite;
     }
 
 
-    /* =====================================================
+    /* =========================================================
        TABLET
-    ===================================================== */
+    ========================================================= */
 
     @media (max-width: 1000px) {
 
       .services-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .about-wrapper {
         grid-template-columns: 1fr;
-
         gap: 45px;
       }
 
       .hero-orb {
         opacity: 0.4;
-
         right: -350px;
       }
 
     }
 
 
-    /* =====================================================
+    /* =========================================================
        MOBILE
-    ===================================================== */
+    ========================================================= */
 
     @media (max-width: 700px) {
 
@@ -1133,40 +960,26 @@
       }
 
       .nav-links.mobile-open {
-
         position: absolute;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: flex-start;
-
         top: 75px;
-
         left: 4%;
         right: 4%;
-
         padding: 25px;
-
-        border:
-          1px solid rgba(255,255,255,0.08);
-
-        background:
-          rgba(10,10,14,0.98);
-
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(10,10,14,0.98);
         border-radius: 15px;
       }
 
       .hero {
         min-height: 90vh;
-
         padding-top: 130px;
       }
 
       .hero h1 {
         font-size: 50px;
-
         letter-spacing: -3px;
       }
 
@@ -1176,7 +989,6 @@
 
       .hero-buttons {
         flex-direction: column;
-
         align-items: stretch;
       }
 
@@ -1187,7 +999,6 @@
       .hero-orb {
         width: 450px;
         height: 450px;
-
         right: -330px;
       }
 
@@ -1199,8 +1010,9 @@
         min-height: 420px;
       }
 
-      .service-visual {
-        height: 210px;
+      .service-image-wrapper {
+        height: 220px;
+        min-height: 220px;
       }
 
       .work-grid {
@@ -1212,8 +1024,7 @@
       }
 
       .about-stats {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .stat-card {
@@ -1226,7 +1037,6 @@
 
       .footer-inner {
         flex-direction: column;
-
         text-align: center;
       }
 
@@ -1252,17 +1062,17 @@
 <body>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        BACKGROUND
-  ====================================================== -->
+  ======================================================== -->
 
   <div class="background-glow glow-one"></div>
   <div class="background-glow glow-two"></div>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        NAVBAR
-  ====================================================== -->
+  ======================================================== -->
 
   <header class="navbar">
 
@@ -1302,7 +1112,7 @@
       <button
         class="menu-button"
         id="menuButton"
-        aria-label="Open Menu"
+        aria-label="Open menu"
       >
         ☰
       </button>
@@ -1312,14 +1122,11 @@
   </header>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        HERO
-  ====================================================== -->
+  ======================================================== -->
 
-  <section
-    class="hero"
-    id="home"
-  >
+  <section class="hero" id="home">
 
     <div class="grid-background"></div>
 
@@ -1343,12 +1150,10 @@
         </h1>
 
         <p class="hero-description">
-
-          Sheriffy Studio helps brands, creators, artists
-          and businesses build stronger digital identities
-          through marketing, content, YouTube growth,
-          music promotion, SEO and modern web development.
-
+          Sheriffy Studio helps brands, creators, artists and
+          businesses build stronger digital identities through
+          marketing, content, YouTube growth, music promotion,
+          SEO and modern web development.
         </p>
 
         <div class="hero-buttons">
@@ -1357,14 +1162,16 @@
             href="#contact"
             class="btn btn-primary"
           >
-            Start a Project →
+            Start a Project
+            <span>→</span>
           </a>
 
           <a
             href="#work"
             class="btn btn-secondary"
           >
-            View Our Work ↗
+            View Our Work
+            <span>↗</span>
           </a>
 
         </div>
@@ -1376,9 +1183,10 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        SERVICES
-  ====================================================== -->
+       IMAGE-BASED VERSION
+  ======================================================== -->
 
   <section
     class="section services"
@@ -1390,7 +1198,7 @@
       <div class="section-heading reveal">
 
         <div class="section-label">
-          My Services
+          MY SERVICES
         </div>
 
         <h2>
@@ -1399,11 +1207,9 @@
         </h2>
 
         <p>
-
           I provide creative digital solutions designed to
-          help brands, creators, artists and businesses build
-          their presence, reach more people and grow online.
-
+          help brands, creators, artists, and businesses build
+          their presence, reach more people, and grow online.
         </p>
 
       </div>
@@ -1418,19 +1224,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/digital-marketing.jpg"
-              alt="Digital Marketing"
-            >
+              src="images/services/digital-marketing.jpg"
+              alt="Digital Marketing Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               01
             </span>
 
-            <span class="service-image-label">
-              Digital Growth
+            <span class="service-badge">
+              Marketing
             </span>
 
           </div>
@@ -1443,7 +1254,7 @@
 
             <p>
               Strategic online marketing to grow brands,
-              reach customers and increase conversions.
+              reach customers, and increase conversions.
             </p>
 
             <a
@@ -1464,19 +1275,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/social-media-marketing.jpg"
-              alt="Social Media Marketing"
-            >
+              src="images/services/social-media-marketing.jpg"
+              alt="Social Media Marketing Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               02
             </span>
 
-            <span class="service-image-label">
-              Social Growth
+            <span class="service-badge">
+              Social Media
             </span>
 
           </div>
@@ -1489,7 +1305,7 @@
 
             <p>
               Building engaging social media strategies,
-              content and campaigns that grow audiences.
+              content, and campaigns that grow audiences.
             </p>
 
             <a
@@ -1510,19 +1326,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/youtube-marketing.jpg"
-              alt="YouTube Marketing"
-            >
+              src="images/services/youtube-marketing.jpg"
+              alt="YouTube Marketing Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               03
             </span>
 
-            <span class="service-image-label">
-              YouTube Growth
+            <span class="service-badge">
+              YouTube
             </span>
 
           </div>
@@ -1535,7 +1356,7 @@
 
             <p>
               Promoting videos and channels to increase views,
-              subscribers, engagement and visibility.
+              subscribers, engagement, and visibility.
             </p>
 
             <a
@@ -1556,19 +1377,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/music-promotion.jpg"
-              alt="Music Promotion"
-            >
+              src="images/services/music-promotion.jpg"
+              alt="Music Promotion Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               04
             </span>
 
-            <span class="service-image-label">
-              Artist Promotion
+            <span class="service-badge">
+              Music
             </span>
 
           </div>
@@ -1581,7 +1407,7 @@
 
             <p>
               Helping artists promote their music, reach new
-              audiences and build their online presence.
+              audiences, and build their online presence.
             </p>
 
             <a
@@ -1602,19 +1428,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/youtube-channel-management.jpg"
-              alt="YouTube Channel Management"
-            >
+              src="images/services/youtube-channel-management.jpg"
+              alt="YouTube Channel Management Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               05
             </span>
 
-            <span class="service-image-label">
-              Channel Management
+            <span class="service-badge">
+              Management
             </span>
 
           </div>
@@ -1627,7 +1458,7 @@
 
             <p>
               Managing content, uploads, optimization,
-              analytics and overall channel growth.
+              analytics, and overall channel growth.
             </p>
 
             <a
@@ -1648,18 +1479,23 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/youtube-automation.jpg"
-              alt="YouTube Automation"
-            >
+              src="images/services/youtube-automation.jpg"
+              alt="YouTube Automation Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               06
             </span>
 
-            <span class="service-image-label">
+            <span class="service-badge">
               Automation
             </span>
 
@@ -1694,19 +1530,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/youtube-seo.jpg"
-              alt="YouTube SEO"
-            >
+              src="images/services/youtube-seo.jpg"
+              alt="YouTube SEO Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               07
             </span>
 
-            <span class="service-image-label">
-              Search Optimization
+            <span class="service-badge">
+              SEO
             </span>
 
           </div>
@@ -1718,8 +1559,9 @@
             </h3>
 
             <p>
-              Optimizing titles, descriptions, keywords, tags
-              and content to improve search visibility.
+              Optimizing titles, descriptions, keywords, tags,
+              and content to improve search visibility and
+              discoverability.
             </p>
 
             <a
@@ -1740,19 +1582,24 @@
 
         <article class="service-card reveal">
 
-          <div class="service-visual">
+          <div class="service-image-wrapper">
 
             <img
-              src="images/web-development.jpg"
-              alt="Web Development"
-            >
+              src="images/services/web-development.jpg"
+              alt="Web Development Services"
+              class="service-image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
 
             <span class="service-number">
               08
             </span>
 
-            <span class="service-image-label">
-              Digital Experience
+            <span class="service-badge">
+              Development
             </span>
 
           </div>
@@ -1764,9 +1611,9 @@
             </h3>
 
             <p>
-              Creating modern, responsive and professional
-              websites designed to showcase brands and
-              convert visitors.
+              Creating modern, responsive, and professional
+              websites designed to showcase brands and convert
+              visitors.
             </p>
 
             <a
@@ -1788,9 +1635,9 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        OUR WORK
-  ====================================================== -->
+  ======================================================== -->
 
   <section
     class="section"
@@ -1960,7 +1807,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -1968,9 +1814,9 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        ABOUT
-  ====================================================== -->
+  ======================================================== -->
 
   <section
     class="section"
@@ -1980,7 +1826,6 @@
     <div class="container">
 
       <div class="about-wrapper">
-
 
         <div class="about-text reveal">
 
@@ -2061,7 +1906,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -2069,9 +1913,9 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        CONTACT
-  ====================================================== -->
+  ======================================================== -->
 
   <section
     class="section"
@@ -2088,16 +1932,14 @@
 
         <h2>
           Have an idea?
-          <br>
+          <br />
           Let's build it.
         </h2>
 
         <p>
-
           Tell me what you're working on and let's create a
           digital strategy, content system, website or marketing
           solution that moves your project forward.
-
         </p>
 
         <div class="contact-buttons">
@@ -2108,14 +1950,16 @@
             rel="noopener noreferrer"
             class="btn btn-primary"
           >
-            Chat on WhatsApp →
+            Chat on WhatsApp
+            →
           </a>
 
           <a
             href="mailto:digitalmarketings310@gmail.com"
             class="btn btn-secondary"
           >
-            Send an Email →
+            Send an Email
+            →
           </a>
 
         </div>
@@ -2127,9 +1971,9 @@
   </section>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        FOOTER
-  ====================================================== -->
+  ======================================================== -->
 
   <footer>
 
@@ -2156,9 +2000,9 @@
   </footer>
 
 
-  <!-- =====================================================
-       FLOATING WHATSAPP
-  ====================================================== -->
+  <!-- =======================================================
+       WHATSAPP FLOATING BUTTON
+  ======================================================== -->
 
   <a
     href="https://wa.me/2349035908327"
@@ -2194,13 +2038,15 @@
   </a>
 
 
-  <!-- =====================================================
+  <!-- =======================================================
        JAVASCRIPT
-  ====================================================== -->
+  ======================================================== -->
 
   <script>
 
-    /* MOBILE MENU */
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
 
     const menuButton =
       document.getElementById("menuButton");
@@ -2208,39 +2054,35 @@
     const navLinks =
       document.getElementById("navLinks");
 
-    menuButton.addEventListener(
-      "click",
-      () => {
+    menuButton.addEventListener("click", () => {
 
-        navLinks.classList.toggle(
-          "mobile-open"
-        );
+      navLinks.classList.toggle("mobile-open");
 
-      }
-    );
+    });
 
 
-    /* CLOSE MOBILE MENU */
+    /* =========================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ========================================= */
 
     document
       .querySelectorAll(".nav-links a")
       .forEach(link => {
 
-        link.addEventListener(
-          "click",
-          () => {
+        link.addEventListener("click", () => {
 
-            navLinks.classList.remove(
-              "mobile-open"
-            );
+          navLinks.classList.remove(
+            "mobile-open"
+          );
 
-          }
-        );
+        });
 
       });
 
 
-    /* SCROLL REVEAL */
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
 
     const revealElements =
       document.querySelectorAll(".reveal");
@@ -2253,24 +2095,21 @@
       revealElements.forEach(element => {
 
         const elementTop =
-          element
-            .getBoundingClientRect()
-            .top;
+          element.getBoundingClientRect().top;
 
         if (
           elementTop <
           windowHeight - 80
         ) {
 
-          element.classList.add(
-            "active"
-          );
+          element.classList.add("active");
 
         }
 
       });
 
     };
+
 
     window.addEventListener(
       "scroll",
@@ -2280,7 +2119,9 @@
     revealOnScroll();
 
 
-    /* NAVBAR SCROLL EFFECT */
+    /* =========================================
+       NAVBAR SHADOW ON SCROLL
+    ========================================= */
 
     const navbar =
       document.querySelector(".navbar");
@@ -2292,12 +2133,12 @@
         if (window.scrollY > 50) {
 
           navbar.style.background =
-            "rgba(7, 7, 10, 0.96)";
+            "rgba(7, 7, 10, 0.94)";
 
         } else {
 
           navbar.style.background =
-            "rgba(7, 7, 10, 0.80)";
+            "rgba(7, 7, 10, 0.78)";
 
         }
 
